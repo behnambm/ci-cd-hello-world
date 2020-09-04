@@ -1,0 +1,21 @@
+version: 0.1
+
+jobs: 
+  build:
+    working_directory: ~/hello-world
+    docker:
+      - image: circleci/python:3.8.2
+
+    steps: 
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+
+      - run:
+          name: run linter
+          command: flake8
+
