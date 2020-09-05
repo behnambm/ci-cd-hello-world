@@ -26,3 +26,5 @@ jobs:
           command: | 
             . venv/bin/activate
             python -m unittest tests/base.py
+          environment:
+            TEST_ENV_VAR: TEST
