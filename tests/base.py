@@ -7,7 +7,7 @@ class MyTest(unittest.TestCase):
         ''' this is just a simple unittest
         to see are tests work in circleci or not'''
         result = index()
-        expected_value = 'hello, world with CI/CD TEST' 
+        expected_value = 'hello, world with CI/CD TEST'
         self.assertEqual(result, expected_value)
 
 
